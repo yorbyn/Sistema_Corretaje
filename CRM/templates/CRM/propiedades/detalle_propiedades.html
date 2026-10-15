@@ -1,0 +1,38 @@
+{% extends 'CRM/base.html' %}
+
+{% block title %}Detalle de Propiedad | MMCONTAPROP{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="card shadow-sm mb-4">
+            <!-- Imagen de muestra o carrusel -->
+            <div class="bg-secondary text-white text-center py-5 rounded-top">
+                <span>[ Área para fotografías de la propiedad ]</span>
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">{{ propiedad.titulo }}</h2>
+                <h4 class="text-success fw-bold">$ {{ propiedad.precio }} ({{ propiedad.tipo_operacion }})</h4>
+                <hr>
+                <h5>Descripción</h5>
+                <p class="card-text">{{ propiedad.descripcion }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm p-3 mb-3">
+            <h5>Información del Propietario</h5>
+            <hr>
+            <p><strong>Nombre:</strong> {{ propiedad.propietario.nombre }}</p>
+            <p><strong>RUT:</strong> {{ propiedad.propietario.rut }}</p>
+            <p><strong>Contacto:</strong> {{ propiedad.propietario.telefono }}</p>
+            <p><strong>Correo:</strong> {{ propiedad.propietario.correo }}</p>
+        </div>
+
+        <div class="d-grid gap-2">
+            <a href="{% url 'listar_propiedades' %}" class="btn btn-outline-secondary">Volver al Listado</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
