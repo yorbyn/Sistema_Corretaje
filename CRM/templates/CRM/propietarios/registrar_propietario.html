@@ -1,0 +1,33 @@
+{% extends 'CRM/base.html' %}
+
+{% block title %}Registrar Propietario{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm p-4">
+            <h2 class="mb-4">Registrar Propietario</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">RUT</label>
+                    <input type="text" class="form-control" name="rut" placeholder="Ej: 12.345.678-9" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" name="telefono">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" name="correo">
+                </div>
+                <button type="submit" class="btn btn-success w-100">Registrar Propietario</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

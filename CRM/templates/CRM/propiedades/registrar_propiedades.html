@@ -1,0 +1,38 @@
+{% extends 'CRM/base.html' %}
+
+{% block title %}Registrar Propiedad{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm p-4">
+            <h2 class="mb-4">Nueva Propiedad</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">Título del Inmueble</label>
+                    <input type="text" class="form-control" name="titulo" required>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Tipo de Operación</label>
+                        <select class="form-select" name="tipo_operacion">
+                            <option value="Venta">Venta</option>
+                            <option value="Arriendo">Arriendo</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Precio ($)</label>
+                        <input type="number" class="form-control" name="precio" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Descripción</label>
+                    <textarea class="form-control" name="descripcion" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Guardar Propiedad</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

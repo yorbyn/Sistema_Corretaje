@@ -1,0 +1,25 @@
+{% extends 'CRM/base.html' %}
+
+{% block title %}Listado de Propiedades{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Propiedades Disponibles</h2>
+    <a href="#" class="btn btn-primary">+ Registrar Propiedad</a>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Casa en Sector Norte</h5>
+                <h6 class="text-success mb-2">$ 120.000.000 (Venta)</h6>
+                <p class="card-text text-muted">Hermosa propiedad de 3 habitaciones y 2 baños con amplio patio trasero.</p>
+            </div>
+            <div class="card-footer bg-white border-top-0">
+                <a href="#" class="btn btn-outline-primary btn-sm w-100">Ver Detalles</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

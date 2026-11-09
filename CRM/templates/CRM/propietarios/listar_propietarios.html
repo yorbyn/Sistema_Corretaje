@@ -1,0 +1,38 @@
+{% extends 'CRM/base.html' %}
+
+{% block title %}Propietarios{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Listado de Propietarios</h2>
+    <a href="#" class="btn btn-primary">+ Nuevo Propietario</a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <table class="table table-striped align-middle">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>RUT</th>
+                    <th>Teléfono</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fila de ejemplo -->
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>12.345.678-9</td>
+                    <td>+56912345678</td>
+                    <td>juan.perez@email.com</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-outline-secondary">Editar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
